@@ -3,8 +3,18 @@
 Conversion landing page for ad traffic (Google, Facebook/Instagram, etc.) driving the
 **$49 New Patient Special** offer for Life Charge Chiropractic in Gallatin, TN.
 
-A static site — no build step. `index.html` plus local fonts and images. Deployable
-as-is to GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any static host.
+A static site — no build step. Deployable as-is to GitHub Pages, Netlify, Vercel,
+Cloudflare Pages, or any static host.
+
+## Pages
+
+- **`index.html`** — the $49 offer landing page (conversion-focused, no outbound links)
+- **`learn.html`** — interactive patient education page ("How Whole-System Chiropractic
+  Works"): clickable spine explorer, symptom-vs-root-cause toggle, real Visit 0 → Visit 10
+  thermal scan comparison, three-phase care journey, and a 60-second self-check quiz that
+  funnels into the $49 offer. Use it for organic social, email follow-ups, and warming up
+  leads who aren't ready to book yet. The landing page intentionally does **not** link to
+  it, so paid ad traffic stays focused on the form.
 
 ## Page structure
 
