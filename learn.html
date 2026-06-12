@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Whole-System Chiropractic Works | Life Charge Chiropractic — Gallatin, TN</title>
+<meta name="description" content="An interactive guide to whole-system chiropractic care: explore how your spine and nervous system connect to full-body function, see real thermal scan results, and learn what the three phases of corrective care look like.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="How Whole-System Chiropractic Works | Life Charge Chiropractic">
+<meta property="og:description" content="Explore the spine–nervous system connection, see real thermal imaging results, and take a 60-second spine self-check.">
+<meta property="og:image" content="assets/photos/dr-adjusting.webp">
+
+<link rel="preload" href="fonts/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+
+<style>
+  @font-face { font-family: 'Montserrat'; src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype'); font-weight: 100 900; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Montserrat'; src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'); font-weight: 100 900; font-style: italic; font-display: swap; }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #ED3237; --orange: #F47B20; --yellow: #FFCC29; --charcoal: #606062;
+    --deep: #2D2D2F; --cream: #FFF7E8; --sand: #EADDC8; --sage: #AEBFA3;
+    --white: #fff; --border: #E5E5E5;
+    --grad: linear-gradient(135deg, #ED3237 0%, #F47B20 50%, #FFCC29 100%);
+    --font: 'Montserrat', sans-serif; --serif: 'Lora', Georgia, serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--deep); background: var(--white); }
+  button { font-family: var(--font); }
+
+  /* ── NAV ── */
+  .lp-nav {
+    position: sticky; top: 0; z-index: 300;
+    background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .lp-nav-logo img { height: 36px; object-fit: contain; }
+  .lp-nav-right { display: flex; align-items: center; gap: 20px; }
+  .lp-nav-phone { font-size: 13px; font-weight: 700; color: var(--deep); text-decoration: none; letter-spacing: 0.02em; }
+  .lp-nav-phone:hover { color: var(--red); }
+  .btn-primary {
+    background: var(--red); color: white;
+    font-size: 11px; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    border: none; border-radius: 6px; padding: 11px 20px;
+    cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    text-decoration: none; display: inline-block; white-space: nowrap;
+  }
+  .btn-primary:hover { background: #D42B30; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(237,50,55,0.3); }
+  .btn-primary-lg {
+    font-size: 13px; padding: 16px 32px; border-radius: 6px;
+    background: var(--red); color: white;
+    font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    border: none; cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    display: inline-block; text-decoration: none; white-space: nowrap;
+  }
+  .btn-primary-lg:hover { background: #D42B30; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(237,50,55,0.35); }
+  .btn-grad-lg {
+    font-size: 14px; padding: 18px 40px; border-radius: 6px;
+    background: var(--grad); color: white;
+    font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    border: none; cursor: pointer; transition: opacity 0.2s, transform 0.15s;
+    display: inline-block; text-decoration: none; white-space: nowrap;
+  }
+  .btn-grad-lg:hover { opacity: 0.92; transform: translateY(-2px); }
+
+  /* ── SHARED ── */
+  .sw { padding: 88px 40px; }
+  .sw-sm { padding: 64px 40px; }
+  .inner { max-width: 1100px; margin: 0 auto; }
+  .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .eyebrow-y { color: var(--yellow); }
+  .section-h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: var(--deep); margin-bottom: 14px; }
+  .section-h2 em, .edu-hero h1 em { font-style: italic; font-family: var(--serif); font-weight: 400; }
+  .section-p { font-size: 15px; color: var(--charcoal); line-height: 1.75; }
+  .serif-quote { font-family: var(--serif); font-style: italic; }
+
+  /* ── HERO ── */
+  .edu-hero { background: var(--deep); padding: 96px 40px 88px; text-align: center; position: relative; overflow: hidden; }
+  .edu-hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 2; }
+  .edu-hero .eyebrow { color: var(--yellow); display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; }
+  .edu-hero .eyebrow::before, .edu-hero .eyebrow::after { content: ''; width: 18px; height: 2px; background: var(--yellow); display: block; }
+  .edu-hero h1 {
+    font-size: clamp(32px, 4.5vw, 56px); font-weight: 900;
+    line-height: 1.08; letter-spacing: -0.03em; color: white; margin-bottom: 20px;
+  }
+  .edu-hero h1 em { color: var(--yellow); }
+  .edu-hero p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.75; max-width: 560px; margin: 0 auto 36px; }
+  .edu-hero-tagline { font-family: var(--serif); font-style: italic; font-size: 15px; color: rgba(255,255,255,0.45); margin-top: 28px; }
+  .edu-hero-nav { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .edu-hero-nav a {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7); text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 10px 18px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .edu-hero-nav a:hover { border-color: var(--yellow); color: var(--yellow); background: rgba(255,204,41,0.06); }
+
+  /* ── SPINE EXPLORER ── */
+  .spine-section { background: var(--cream); }
+  .spine-layout { display: grid; grid-template-columns: 340px 1fr; gap: 48px; margin-top: 40px; align-items: start; }
+  .spine-figure {
+    background: var(--white); border-radius: 12px; padding: 28px 20px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .spine-figure svg { width: 100%; max-width: 260px; height: auto; display: block; }
+  .spine-figure-hint { font-size: 11px; font-weight: 600; color: var(--charcoal); display: flex; align-items: center; gap: 7px; }
+  .spine-figure-hint .pulse {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--red); flex-shrink: 0;
+    animation: pulse 1.8s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(237,50,55,0.45); }
+    70% { box-shadow: 0 0 0 9px rgba(237,50,55,0); }
+    100% { box-shadow: 0 0 0 0 rgba(237,50,55,0); }
+  }
+  .spine-region { cursor: pointer; }
+  .spine-region rect { fill: #D8D2C6; transition: fill 0.25s; }
+  .spine-region text {
+    font-family: var(--font); font-size: 11px; font-weight: 800;
+    letter-spacing: 0.08em; text-transform: uppercase; fill: var(--charcoal);
+    transition: fill 0.25s;
+  }
+  .spine-region:hover rect { fill: #BFB8A8; }
+  .spine-region.active rect { fill: var(--region-color); }
+  .spine-region.active text { fill: var(--region-color); font-weight: 900; }
+  .spine-panel { display: flex; flex-direction: column; gap: 18px; }
+  .spine-panel-card { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .sp-region-tag {
+    display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.18em;
+    text-transform: uppercase; color: white; border-radius: 999px; padding: 6px 14px; margin-bottom: 14px;
+  }
+  .sp-title { font-size: 24px; font-weight: 900; letter-spacing: -0.02em; color: var(--deep); margin-bottom: 6px; }
+  .sp-fact { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--charcoal); margin-bottom: 20px; line-height: 1.6; }
+  .sp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .sp-col-label { font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 10px; }
+  .sp-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .sp-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--deep); font-weight: 500; line-height: 1.5; }
+  .sp-list li::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--grad);
+    flex-shrink: 0; margin-top: 6px;
+  }
+  .spine-note { font-size: 11px; color: var(--charcoal); line-height: 1.6; }
+
+  /* ── ICEBERG / BENEATH THE SURFACE ── */
+  .surface-section { background: var(--white); }
+  .surface-toggle {
+    display: inline-flex; background: var(--cream); border-radius: 999px; padding: 5px; margin: 32px 0 28px;
+  }
+  .surface-toggle button {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    border: none; background: transparent; color: var(--charcoal);
+    border-radius: 999px; padding: 12px 26px; cursor: pointer; transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+  }
+  .surface-toggle button.active { background: var(--deep); color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.18); }
+  .surface-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .surface-card {
+    border-radius: 10px; padding: 26px 24px;
+    display: flex; flex-direction: column; gap: 8px;
+    border: 1.5px solid var(--border); background: var(--white);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .surface-card.deep-mode { background: var(--deep); border-color: var(--deep); }
+  .surface-card-title { font-size: 14px; font-weight: 800; color: var(--deep); line-height: 1.3; }
+  .surface-card-body { font-size: 13px; color: var(--charcoal); line-height: 1.65; }
+  .surface-card.deep-mode .surface-card-title { color: var(--yellow); }
+  .surface-card.deep-mode .surface-card-body { color: rgba(255,255,255,0.7); }
+  .surface-quote { margin-top: 28px; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--charcoal); }
+
+  /* ── CLEARER PICTURE / THERMAL ── */
+  .picture-section { background: var(--deep); }
+  .picture-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 44px; align-items: center; }
+  .thermal-stage {
+    position: relative; border-radius: 12px; overflow: hidden;
+    background: #000; aspect-ratio: 568/528;
+  }
+  .thermal-stage img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  .thermal-stage img.hidden-scan { opacity: 0; }
+  .thermal-label {
+    position: absolute; top: 14px; left: 14px; z-index: 2;
+    background: rgba(0,0,0,0.65); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px; padding: 7px 13px;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: white;
+  }
+  .thermal-toggle { display: flex; gap: 8px; margin-top: 14px; }
+  .thermal-toggle button {
+    flex: 1; font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    border: 1.5px solid rgba(255,255,255,0.2); background: transparent; color: rgba(255,255,255,0.6);
+    border-radius: 6px; padding: 13px; cursor: pointer; transition: background 0.25s, color 0.25s, border-color 0.25s;
+  }
+  .thermal-toggle button.active { background: var(--grad); border-color: transparent; color: white; }
+  .thermal-caption { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 12px; line-height: 1.6; }
+  .picture-side .section-h2 { color: white; }
+  .picture-side .section-p { color: rgba(255,255,255,0.65); }
+  .pic-tools { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }
+  .pic-tool {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 16px 18px;
+  }
+  .pic-tool-icon {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--grad); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; color: white;
+  }
+  .pic-tool-title { font-size: 13px; font-weight: 800; color: white; margin-bottom: 3px; }
+  .pic-tool-body { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+  /* ── CARE JOURNEY ── */
+  .journey-section { background: var(--white); }
+  .journey-steps { display: flex; gap: 10px; margin-top: 40px; }
+  .journey-step {
+    flex: 1; text-align: left; cursor: pointer;
+    background: var(--cream); border: 1.5px solid transparent; border-radius: 10px;
+    padding: 20px 22px; transition: background 0.25s, border-color 0.25s, transform 0.2s;
+  }
+  .journey-step:hover { transform: translateY(-2px); }
+  .journey-step.active { background: var(--white); border-color: var(--step-color); box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .journey-step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; border-radius: 50%;
+    font-size: 12px; font-weight: 900; color: white; background: #C9C2B4; margin-bottom: 10px;
+    transition: background 0.25s;
+  }
+  .journey-step.active .journey-step-num { background: var(--step-color); }
+  .journey-step-title { font-size: 14px; font-weight: 800; color: var(--deep); }
+  .journey-step-sub { font-size: 11px; color: var(--charcoal); margin-top: 3px; }
+  .journey-detail {
+    margin-top: 18px; background: var(--cream); border-radius: 12px; padding: 36px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .jd-phase-tag {
+    display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.18em;
+    text-transform: uppercase; color: white; border-radius: 999px; padding: 6px 14px; margin-bottom: 14px;
+  }
+  .jd-title { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; color: var(--deep); margin-bottom: 10px; }
+  .jd-goal { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--charcoal); line-height: 1.65; margin-bottom: 16px; }
+  .jd-body { font-size: 13px; color: var(--charcoal); line-height: 1.7; }
+  .jd-list-label { font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 12px; }
+  .jd-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .jd-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--deep); font-weight: 500; line-height: 1.55; }
+  .jd-check {
+    width: 18px; height: 18px; border-radius: 50%; background: var(--grad);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+  }
+  .jd-check svg { width: 9px; height: 9px; stroke: white; stroke-width: 2.5; fill: none; }
+
+  /* ── QUIZ ── */
+  .quiz-section { background: var(--cream); }
+  .quiz-card {
+    max-width: 640px; margin: 40px auto 0; background: var(--white);
+    border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); padding: 40px;
+  }
+  .quiz-progress { display: flex; gap: 6px; margin-bottom: 28px; }
+  .quiz-progress span { flex: 1; height: 5px; border-radius: 999px; background: var(--border); transition: background 0.3s; }
+  .quiz-progress span.done { background: var(--grad); }
+  .quiz-qnum { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .quiz-q { font-size: 20px; font-weight: 800; color: var(--deep); line-height: 1.35; margin-bottom: 26px; min-height: 54px; }
+  .quiz-actions { display: flex; gap: 10px; }
+  .quiz-actions button {
+    flex: 1; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    border-radius: 6px; padding: 15px; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .quiz-yes { background: var(--red); color: white; border: none; }
+  .quiz-yes:hover { background: #D42B30; transform: translateY(-1px); }
+  .quiz-no { background: transparent; color: var(--deep); border: 1.5px solid var(--border); }
+  .quiz-no:hover { border-color: var(--deep); }
+  .quiz-restart {
+    background: none; border: none; font-size: 11px; font-weight: 700; color: var(--charcoal);
+    text-decoration: underline; cursor: pointer; margin-top: 18px;
+  }
+  .quiz-result { display: none; text-align: center; }
+  .quiz-result-icon {
+    width: 56px; height: 56px; border-radius: 50%; background: var(--grad);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
+  }
+  .quiz-result-icon svg { width: 26px; height: 26px; stroke: white; stroke-width: 2.5; fill: none; }
+  .quiz-result h3 { font-size: 22px; font-weight: 900; color: var(--deep); margin-bottom: 10px; }
+  .quiz-result p { font-size: 14px; color: var(--charcoal); line-height: 1.7; margin-bottom: 24px; }
+  .quiz-disclaimer { font-size: 10px; color: #AAAAAA; text-align: center; margin-top: 16px; line-height: 1.5; }
+
+  /* ── FINAL CTA ── */
+  .final-cta { background: var(--deep); padding: 88px 40px; text-align: center; }
+  .final-cta-inner { max-width: 680px; margin: 0 auto; }
+  .final-cta h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; color: white; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
+  .final-cta h2 em { font-style: italic; font-family: var(--serif); font-weight: 400; color: var(--yellow); }
+  .final-cta p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; }
+  .final-cta-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  .btn-ghost-light {
+    background: transparent; color: white;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+    border: 2px solid rgba(255,255,255,0.25); border-radius: 6px;
+    padding: 14px 26px; cursor: pointer; transition: border-color 0.2s, background 0.2s;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  }
+  .btn-ghost-light:hover { border-color: white; background: rgba(255,255,255,0.07); }
+
+  /* ── FOOTER ── */
+  .footer-grad-line { height: 3px; background: var(--grad); }
+  footer { background: #111113; padding: 36px 40px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-info { font-size: 11px; color: #5A5A5C; line-height: 1.7; }
+  .footer-info a { color: #7A7A7C; text-decoration: none; }
+  .footer-info a:hover { color: var(--red); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .spine-layout { grid-template-columns: 1fr; gap: 28px; }
+    .spine-figure { max-width: 420px; margin: 0 auto; width: 100%; }
+    .picture-layout { grid-template-columns: 1fr; gap: 36px; }
+  }
+  @media (max-width: 860px) {
+    .surface-grid { grid-template-columns: 1fr; }
+    .journey-steps { flex-direction: column; }
+    .journey-detail { grid-template-columns: 1fr; gap: 24px; }
+    .sp-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .lp-nav { padding: 0 16px; }
+    .lp-nav-logo img { height: 30px; }
+    .lp-nav-right { gap: 12px; }
+    .lp-nav-phone { display: none; }
+    .sw, .sw-sm, .final-cta, .edu-hero { padding-left: 20px; padding-right: 20px; }
+    .sw { padding-top: 64px; padding-bottom: 64px; }
+    .edu-hero { padding-top: 64px; padding-bottom: 60px; }
+    .quiz-card { padding: 28px 22px; }
+    .spine-panel-card { padding: 24px 20px; }
+    .journey-detail { padding: 26px 22px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .spine-figure-hint .pulse { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="lp-nav">
+  <div class="lp-nav-logo">
+    <a href="index.html"><img src="assets/logo-horizontal.webp" alt="Life Charge Chiropractic"></a>
+  </div>
+  <div class="lp-nav-right">
+    <a href="tel:6152199912" class="lp-nav-phone">(615) 219-9912</a>
+    <a href="index.html#claim" class="btn-primary">Claim $49 Special</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="edu-hero">
+  <div class="edu-hero-inner">
+    <div class="eyebrow">An interactive guide</div>
+    <h1>Your body does not function<br>in <em>separate pieces.</em></h1>
+    <p>
+      Most care chases symptoms. We look at the system underneath them — your spine and
+      nervous system — to understand what's actually driving the problem. Take five minutes
+      to explore how whole-system chiropractic works.
+    </p>
+    <div class="edu-hero-nav">
+      <a href="#spine">Explore your spine</a>
+      <a href="#surface">Beneath the surface</a>
+      <a href="#picture">See a real scan</a>
+      <a href="#journey">The care journey</a>
+      <a href="#quiz">60-second self-check</a>
+    </div>
+    <div class="edu-hero-tagline">"Better care starts with a clearer picture."</div>
+  </div>
+</header>
+
+<!-- SPINE EXPLORER -->
+<section class="sw spine-section" id="spine">
+  <div class="inner">
+    <div class="eyebrow">The connected system</div>
+    <h2 class="section-h2">Every region of your spine is<br>wired to the rest of you.</h2>
+    <p class="section-p" style="max-width:560px;">
+      Your nervous system runs through your spine and reaches every part of your body.
+      When a region is stressed or out of alignment, the effects rarely stay local.
+      Tap a region to see what it connects to.
+    </p>
+    <div class="spine-layout">
+      <div class="spine-figure">
+        <svg viewBox="0 0 220 560" role="group" aria-label="Interactive spine diagram with four selectable regions">
+          <!-- CERVICAL C1–C7 -->
+          <g class="spine-region active" id="region-cervical" style="--region-color:#ED3237;" data-region="cervical" tabindex="0" role="button" aria-label="Cervical spine, neck region">
+            <text x="150" y="55" text-anchor="start">Neck</text>
+            <rect x="86" y="10"  width="48" height="12" rx="6"/>
+            <rect x="84" y="26"  width="52" height="12" rx="6"/>
+            <rect x="83" y="42"  width="54" height="12" rx="6"/>
+            <rect x="82" y="58"  width="56" height="12" rx="6"/>
+            <rect x="81" y="74"  width="58" height="12" rx="6"/>
+            <rect x="80" y="90"  width="60" height="12" rx="6"/>
+            <rect x="79" y="106" width="62" height="12" rx="6"/>
+          </g>
+          <!-- THORACIC T1–T12 -->
+          <g class="spine-region" id="region-thoracic" style="--region-color:#F47B20;" data-region="thoracic" tabindex="0" role="button" aria-label="Thoracic spine, mid-back region">
+            <text x="158" y="200" text-anchor="start">Mid-back</text>
+            <rect x="77" y="124" width="66" height="13" rx="6"/>
+            <rect x="76" y="141" width="68" height="13" rx="6"/>
+            <rect x="75" y="158" width="70" height="13" rx="6"/>
+            <rect x="74" y="175" width="72" height="13" rx="6"/>
+            <rect x="73" y="192" width="74" height="13" rx="6"/>
+            <rect x="73" y="209" width="74" height="13" rx="6"/>
+            <rect x="72" y="226" width="76" height="13" rx="6"/>
+            <rect x="72" y="243" width="76" height="13" rx="6"/>
+            <rect x="71" y="260" width="78" height="13" rx="6"/>
+            <rect x="71" y="277" width="78" height="13" rx="6"/>
+            <rect x="70" y="294" width="80" height="13" rx="6"/>
+            <rect x="70" y="311" width="80" height="13" rx="6"/>
+          </g>
+          <!-- LUMBAR L1–L5 -->
+          <g class="spine-region" id="region-lumbar" style="--region-color:#FFCC29;" data-region="lumbar" tabindex="0" role="button" aria-label="Lumbar spine, lower back region">
+            <text x="166" y="385" text-anchor="start">Lower back</text>
+            <rect x="66" y="330" width="88" height="16" rx="7"/>
+            <rect x="65" y="350" width="90" height="16" rx="7"/>
+            <rect x="64" y="370" width="92" height="16" rx="7"/>
+            <rect x="65" y="390" width="90" height="16" rx="7"/>
+            <rect x="66" y="410" width="88" height="16" rx="7"/>
+          </g>
+          <!-- SACRUM & PELVIS -->
+          <g class="spine-region" id="region-sacral" style="--region-color:#AEBFA3;" data-region="sacral" tabindex="0" role="button" aria-label="Sacrum and pelvis region">
+            <text x="160" y="475" text-anchor="start">Pelvis</text>
+            <rect x="72" y="432" width="76" height="15" rx="7"/>
+            <rect x="78" y="451" width="64" height="14" rx="7"/>
+            <rect x="84" y="469" width="52" height="13" rx="6"/>
+            <rect x="90" y="486" width="40" height="12" rx="6"/>
+            <rect x="96" y="502" width="28" height="11" rx="5"/>
+            <rect x="101" y="517" width="18" height="10" rx="5"/>
+          </g>
+        </svg>
+        <div class="spine-figure-hint"><span class="pulse"></span>Tap a spine region to explore it</div>
+      </div>
+      <div class="spine-panel">
+        <div class="spine-panel-card">
+          <span class="sp-region-tag" id="sp-tag">Cervical · C1–C7</span>
+          <div class="sp-title" id="sp-title">The Neck</div>
+          <div class="sp-fact" id="sp-fact"></div>
+          <div class="sp-cols">
+            <div>
+              <div class="sp-col-label">Connected to</div>
+              <ul class="sp-list" id="sp-connects"></ul>
+            </div>
+            <div>
+              <div class="sp-col-label">When it's stressed, people often notice</div>
+              <ul class="sp-list" id="sp-signs"></ul>
+            </div>
+          </div>
+        </div>
+        <p class="spine-note">
+          This is education, not a diagnosis — symptoms can have many causes. That's exactly why
+          we examine before we recommend anything: objective findings first, care second.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEATH THE SURFACE -->
+<section class="sw surface-section" id="surface">
+  <div class="inner">
+    <div class="eyebrow">Symptoms vs. system</div>
+    <h2 class="section-h2">Pain matters. But pain doesn't<br>always tell the full story.</h2>
+    <p class="section-p" style="max-width:560px;">
+      Pain is usually the last thing to show up and the first thing to leave — which is why
+      chasing it rarely fixes anything for long. Flip the view below to see what we mean.
+    </p>
+    <div class="surface-toggle" role="tablist" aria-label="Symptoms versus root causes">
+      <button class="active" id="toggle-feel" role="tab" aria-selected="true">What you feel</button>
+      <button id="toggle-driving" role="tab" aria-selected="false">What may be driving it</button>
+    </div>
+    <div class="surface-grid" id="surface-grid"></div>
+    <p class="surface-quote">"We look deeper to understand what may be driving the problem."</p>
+  </div>
+</section>
+
+<!-- A CLEARER PICTURE -->
+<section class="sw picture-section" id="picture">
+  <div class="inner">
+    <div class="picture-layout">
+      <div>
+        <div class="thermal-stage">
+          <div class="thermal-label" id="thermal-label">Visit 0 — First Scan</div>
+          <img src="assets/photos/thermal-visit0.webp" alt="Thermal scan of a patient's back at visit 0, showing widespread red and orange heat patterns" id="thermal-img-0">
+          <img src="assets/photos/thermal-visit10.webp" alt="Thermal scan of the same patient at visit 10, showing the heat patterns substantially calmed" id="thermal-img-10" class="hidden-scan">
+        </div>
+        <div class="thermal-toggle">
+          <button class="active" id="thermal-btn-0">Visit 0</button>
+          <button id="thermal-btn-10">Visit 10</button>
+        </div>
+        <p class="thermal-caption">
+          A real patient scan from our office. Warmer colors indicate areas of heat along the spine
+          associated with nervous system stress. Individual results vary — that's why everyone gets their own baseline.
+        </p>
+      </div>
+      <div class="picture-side">
+        <div class="eyebrow eyebrow-y">How we see what's going on</div>
+        <h2 class="section-h2">Objective findings —<br>not guesswork.</h2>
+        <p class="section-p">
+          You can't correct what you can't see. Before we recommend anything, we build a clear,
+          measurable picture of how your spine and nervous system are functioning — and we re-measure
+          as care progresses, so you can see your progress instead of taking our word for it.
+        </p>
+        <div class="pic-tools">
+          <div class="pic-tool">
+            <div class="pic-tool-icon">1</div>
+            <div>
+              <div class="pic-tool-title">Thermal &amp; Nervous System Scan</div>
+              <div class="pic-tool-body">Maps heat patterns along your spine to show where nervous system stress is present. Painless, quick, and repeatable — your baseline for tracking change.</div>
+            </div>
+          </div>
+          <div class="pic-tool">
+            <div class="pic-tool-icon">2</div>
+            <div>
+              <div class="pic-tool-title">Digital X-Rays (When Appropriate)</div>
+              <div class="pic-tool-body">Shows the actual structure — alignment, curves, disc spacing — so corrections are specific instead of general. Used only when it adds real clarity.</div>
+            </div>
+          </div>
+          <div class="pic-tool">
+            <div class="pic-tool-icon">3</div>
+            <div>
+              <div class="pic-tool-title">Detailed Chiropractic Exam</div>
+              <div class="pic-tool-body">Hands-on evaluation of posture, movement, and function. Technology informs; the doctor's hands and judgment lead.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARE JOURNEY -->
+<section class="sw journey-section" id="journey">
+  <div class="inner">
+    <div class="eyebrow">Corrective care, not symptom-chasing</div>
+    <h2 class="section-h2">What a care journey<br>actually looks like.</h2>
+    <p class="section-p" style="max-width:560px;">
+      Feeling better and functioning better are two different finish lines. Our care moves through
+      three phases — each with its own goal, and a re-exam to prove it's working. Tap a phase.
+    </p>
+    <div class="journey-steps" role="tablist" aria-label="Phases of care">
+      <button class="journey-step active" style="--step-color:#ED3237;" data-phase="0" role="tab" aria-selected="true">
+        <span class="journey-step-num">1</span>
+        <div class="journey-step-title">Relief Care</div>
+        <div class="journey-step-sub">Calm it down</div>
+      </button>
+      <button class="journey-step" style="--step-color:#F47B20;" data-phase="1" role="tab" aria-selected="false">
+        <span class="journey-step-num">2</span>
+        <div class="journey-step-title">Corrective Care</div>
+        <div class="journey-step-sub">Fix the pattern</div>
+      </button>
+      <button class="journey-step" style="--step-color:#2D2D2F;" data-phase="2" role="tab" aria-selected="false">
+        <span class="journey-step-num">3</span>
+        <div class="journey-step-title">Wellness Care</div>
+        <div class="journey-step-sub">Protect the progress</div>
+      </button>
+    </div>
+    <div class="journey-detail">
+      <div>
+        <span class="jd-phase-tag" id="jd-tag">Phase 1</span>
+        <div class="jd-title" id="jd-title">Relief Care</div>
+        <div class="jd-goal" id="jd-goal"></div>
+        <div class="jd-body" id="jd-body"></div>
+      </div>
+      <div>
+        <div class="jd-list-label">What this phase includes</div>
+        <ul class="jd-list" id="jd-list"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="sw quiz-section" id="quiz">
+  <div class="inner" style="text-align:center;">
+    <div class="eyebrow">60-second self-check</div>
+    <h2 class="section-h2">What is your spine<br>telling you?</h2>
+    <p class="section-p" style="max-width:520px;margin:0 auto;">
+      Six quick questions. No email required, nothing stored — just an honest gut-check
+      on the signals your body may already be sending.
+    </p>
+    <div class="quiz-card">
+      <div id="quiz-body">
+        <div class="quiz-progress" id="quiz-progress"></div>
+        <div class="quiz-qnum" id="quiz-qnum">Question 1 of 6</div>
+        <div class="quiz-q" id="quiz-q"></div>
+        <div class="quiz-actions">
+          <button class="quiz-yes" id="quiz-yes">Yes</button>
+          <button class="quiz-no" id="quiz-no">No</button>
+        </div>
+      </div>
+      <div class="quiz-result" id="quiz-result">
+        <div class="quiz-result-icon"><svg viewBox="0 0 28 28" aria-hidden="true"><polyline points="4,14 11,21 24,7"/></svg></div>
+        <h3 id="quiz-result-title"></h3>
+        <p id="quiz-result-body"></p>
+        <a href="index.html#claim" class="btn-primary-lg">Get Checked — $49 New Patient Visit</a>
+        <br>
+        <button class="quiz-restart" id="quiz-restart">Retake the self-check</button>
+      </div>
+      <p class="quiz-disclaimer">This self-check is educational and not a medical diagnosis. Answers stay on your device.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="eyebrow eyebrow-y" style="margin-bottom:16px;">The next step is simple</div>
+    <h2>Curious what <em>your</em><br>clearer picture looks like?</h2>
+    <p>Your first visit includes the consultation, exam, thermal scan, and X-rays when appropriate — everything you just read about — for $49.</p>
+    <div class="final-cta-actions">
+      <a href="index.html#claim" class="btn-grad-lg">Claim the $49 New Patient Special</a>
+      <a href="tel:6152199912" class="btn-ghost-light">Call (615) 219-9912</a>
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:20px;">New patients only · Gallatin, TN · Same-week appointments usually available</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-grad-line"></div>
+<footer>
+  <div class="footer-inner">
+    <img src="assets/logo-horizontal.webp" alt="Life Charge Chiropractic" style="height:32px;filter:brightness(0) invert(1);opacity:0.45;" loading="lazy">
+    <div class="footer-info">
+      1921 Nashville Pike, Suite 500 · Gallatin, TN 37066 ·
+      <a href="tel:6152199912">(615) 219-9912</a><br>
+      © 2026 Life Charge Chiropractic · Serving Gallatin, Hendersonville &amp; Sumner County
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Spine explorer ──
+  var SPINE = {
+    cervical: {
+      tag: 'Cervical · C1–C7', color: '#ED3237', title: 'The Neck',
+      fact: 'Your neck balances a head that weighs as much as a bowling ball — all day, every day.',
+      connects: ['Head, eyes, ears & sinuses', 'Jaw & face', 'Shoulders', 'Arms, wrists & hands'],
+      signs: ['Headaches or migraines', 'Neck stiffness & jaw tension', 'Tingling in the arms or hands', 'Trouble sleeping comfortably']
+    },
+    thoracic: {
+      tag: 'Thoracic · T1–T12', color: '#F47B20', title: 'The Mid-Back',
+      fact: 'The only spine region anchored to your ribs — it protects the organs that keep you running.',
+      connects: ['Chest & rib cage', 'Heart & lung region', 'Digestive organs', 'Postural muscles'],
+      signs: ['Tension between the shoulder blades', 'Postural fatigue from desk work', 'Rib or mid-back discomfort', 'Feeling like you can’t take a full breath']
+    },
+    lumbar: {
+      tag: 'Lumbar · L1–L5', color: '#E0AC00', title: 'The Lower Back',
+      fact: 'Your lumbar spine carries more load than any other region — it earns its complaints.',
+      connects: ['Hips & pelvis', 'Legs, knees & feet', 'Core stability muscles', 'Sciatic nerve pathway'],
+      signs: ['Low back pain or stiffness', 'Sciatica — pain shooting down a leg', 'Hip tightness or imbalance', 'Weakness or numbness in the legs']
+    },
+    sacral: {
+      tag: 'Sacrum & Pelvis', color: '#7E9470', title: 'The Foundation',
+      fact: 'Everything above stacks on this base. When the foundation tilts, the whole structure compensates.',
+      connects: ['Pelvic stability', 'Glutes & hip joints', 'Sciatic nerve roots', 'Balance & gait'],
+      signs: ['Uneven hips or leg length', 'Discomfort after sitting', 'One-sided tightness', 'Tailbone pain']
+    }
+  };
+
+  function renderSpine(key) {
+    var d = SPINE[key];
+    var tag = document.getElementById('sp-tag');
+    tag.textContent = d.tag;
+    tag.style.background = d.color;
+    document.getElementById('sp-title').textContent = d.title;
+    document.getElementById('sp-fact').textContent = d.fact;
+    ['connects', 'signs'].forEach(function (listKey) {
+      var ul = document.getElementById(listKey === 'connects' ? 'sp-connects' : 'sp-signs');
+      ul.innerHTML = '';
+      d[listKey].forEach(function (item) {
+        var li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    });
+  }
+  document.querySelectorAll('.spine-region').forEach(function (region) {
+    function select() {
+      document.querySelectorAll('.spine-region').forEach(function (r) { r.classList.remove('active'); });
+      region.classList.add('active');
+      renderSpine(region.dataset.region);
+    }
+    region.addEventListener('click', select);
+    region.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); }
+    });
+  });
+  renderSpine('cervical');
+
+  // ── Beneath the surface toggle ──
+  var SURFACE = {
+    feel: [
+      { title: 'Recurring headaches', body: 'They show up at work, after driving, or by the end of the day — and pain relievers only rent you a few quiet hours.' },
+      { title: 'Tight shoulders & stiff back', body: 'Stretching helps for an afternoon. The knots come back to the exact same spots, like they live there.' },
+      { title: 'Low energy & poor sleep', body: 'You’re tired but can’t get comfortable, and you wake up feeling like you never fully recharged.' }
+    ],
+    driving: [
+      { title: 'Spinal misalignment', body: 'Vertebrae that have shifted out of position put pressure on nearby nerves — and your head, neck, and shoulders pay the bill.' },
+      { title: 'Compensation patterns', body: 'Your body protects a weak link by overworking everything around it. The tightness isn’t the problem — it’s the bodyguard.' },
+      { title: 'Nervous system stress', body: 'When the system that runs everything is under constant interference, sleep, energy, and recovery all run below capacity.' }
+    ]
+  };
+  var surfaceGrid = document.getElementById('surface-grid');
+  var toggleFeel = document.getElementById('toggle-feel');
+  var toggleDriving = document.getElementById('toggle-driving');
+  function renderSurface(mode) {
+    surfaceGrid.innerHTML = '';
+    SURFACE[mode].forEach(function (card) {
+      var div = document.createElement('div');
+      div.className = 'surface-card' + (mode === 'driving' ? ' deep-mode' : '');
+      div.innerHTML = '<div class="surface-card-title"></div><div class="surface-card-body"></div>';
+      div.querySelector('.surface-card-title').textContent = card.title;
+      div.querySelector('.surface-card-body').textContent = card.body;
+      surfaceGrid.appendChild(div);
+    });
+    toggleFeel.classList.toggle('active', mode === 'feel');
+    toggleDriving.classList.toggle('active', mode === 'driving');
+    toggleFeel.setAttribute('aria-selected', mode === 'feel');
+    toggleDriving.setAttribute('aria-selected', mode === 'driving');
+  }
+  toggleFeel.addEventListener('click', function () { renderSurface('feel'); });
+  toggleDriving.addEventListener('click', function () { renderSurface('driving'); });
+  renderSurface('feel');
+
+  // ── Thermal scan toggle ──
+  var thermalBtn0 = document.getElementById('thermal-btn-0');
+  var thermalBtn10 = document.getElementById('thermal-btn-10');
+  function showScan(visit10) {
+    document.getElementById('thermal-img-0').classList.toggle('hidden-scan', visit10);
+    document.getElementById('thermal-img-10').classList.toggle('hidden-scan', !visit10);
+    document.getElementById('thermal-label').textContent = visit10 ? 'Visit 10 — Re-Scan' : 'Visit 0 — First Scan';
+    thermalBtn0.classList.toggle('active', !visit10);
+    thermalBtn10.classList.toggle('active', visit10);
+  }
+  thermalBtn0.addEventListener('click', function () { showScan(false); });
+  thermalBtn10.addEventListener('click', function () { showScan(true); });
+
+  // ── Care journey ──
+  var JOURNEY = [
+    {
+      tag: 'Phase 1', color: '#ED3237', title: 'Relief Care',
+      goal: 'Goal: calm pain and inflammation down so your body can start to heal.',
+      body: 'Visits are more frequent at first — the same way a cast stays on until the bone is ready. As your body stabilizes, the discomfort that brought you in begins to ease. Most people feel a difference here, but feeling better is the start, not the finish.',
+      list: ['Specific chiropractic adjustments', 'More frequent visits early on', 'Guidance for home between visits', 'Progress check against your baseline scan']
+    },
+    {
+      tag: 'Phase 2', color: '#F47B20', title: 'Corrective Care',
+      goal: 'Goal: retrain alignment and posture so the problem doesn’t keep coming back.',
+      body: 'Pain leaves before the pattern that caused it does. This phase corrects the underlying structure and movement habits — the difference between feeling better for a few weeks and staying better. A re-exam with new scans shows the change objectively.',
+      list: ['Adjustments focused on correction', 'Posture and movement retraining', 'Visit frequency steps down as you hold', 'Re-exam and re-scan to verify progress']
+    },
+    {
+      tag: 'Phase 3', color: '#2D2D2F', title: 'Wellness Care',
+      goal: 'Goal: protect your progress and keep your nervous system functioning at its best.',
+      body: 'Like dental cleanings for your spine — periodic visits keep small stresses from becoming the next big problem. Many of our practice families stay in this phase for years, because it’s easier to maintain health than to chase it back.',
+      list: ['Periodic maintenance adjustments', 'Occasional scans to confirm you’re holding', 'Catch small issues before they grow', 'Care for the whole family, kids included']
+    }
+  ];
+  function renderPhase(i) {
+    var p = JOURNEY[i];
+    var tag = document.getElementById('jd-tag');
+    tag.textContent = p.tag;
+    tag.style.background = p.color;
+    document.getElementById('jd-title').textContent = p.title;
+    document.getElementById('jd-goal').textContent = p.goal;
+    document.getElementById('jd-body').textContent = p.body;
+    var ul = document.getElementById('jd-list');
+    ul.innerHTML = '';
+    p.list.forEach(function (item) {
+      var li = document.createElement('li');
+      li.innerHTML = '<span class="jd-check"><svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3"/></svg></span>';
+      li.appendChild(document.createTextNode(item));
+      ul.appendChild(li);
+    });
+    document.querySelectorAll('.journey-step').forEach(function (step, idx) {
+      step.classList.toggle('active', idx === i);
+      step.setAttribute('aria-selected', idx === i);
+    });
+  }
+  document.querySelectorAll('.journey-step').forEach(function (step) {
+    step.addEventListener('click', function () { renderPhase(parseInt(step.dataset.phase, 10)); });
+  });
+  renderPhase(0);
+
+  // ── Self-check quiz ──
+  var QUESTIONS = [
+    'Do you wake up stiff or sore more mornings than not?',
+    'Do you get headaches or neck tension more than once a week?',
+    'Do you sit for more than six hours on a typical day?',
+    'Have you ever had a car accident, sports injury, or hard fall — even years ago?',
+    'Do you notice yourself slouching, or see uneven shoulders or hips in photos?',
+    'Does pain or stiffness ever make you skip activities you used to enjoy?'
+  ];
+  var RESULTS = [
+    { max: 1, title: 'Your foundation sounds solid.',
+      body: 'Few warning signs — that’s worth protecting. A baseline exam and scan now gives you something objective to compare against later, so small changes never sneak up on you.' },
+    { max: 3, title: 'Worth a closer look.',
+      body: 'A few of these signals together often point to a pattern that’s still easy to address. An exam and scan would show whether something structural is quietly driving them.' },
+    { max: 6, title: 'Your body is sending signals.',
+      body: 'Several signs suggest your spine and nervous system are working harder than they should. The good news: this is exactly what a thorough exam is for — finding out what’s actually going on, before deciding anything.' }
+  ];
+  var quizIndex = 0, quizScore = 0;
+  var quizProgress = document.getElementById('quiz-progress');
+  QUESTIONS.forEach(function () { quizProgress.appendChild(document.createElement('span')); });
+
+  function renderQuestion() {
+    document.getElementById('quiz-qnum').textContent = 'Question ' + (quizIndex + 1) + ' of ' + QUESTIONS.length;
+    document.getElementById('quiz-q').textContent = QUESTIONS[quizIndex];
+    quizProgress.querySelectorAll('span').forEach(function (bar, idx) {
+      bar.classList.toggle('done', idx < quizIndex);
+    });
+  }
+  function answer(yes) {
+    if (yes) quizScore++;
+    quizIndex++;
+    if (quizIndex < QUESTIONS.length) { renderQuestion(); return; }
+    var result = RESULTS.find(function (r) { return quizScore <= r.max; });
+    document.getElementById('quiz-result-title').textContent = result.title;
+    document.getElementById('quiz-result-body').textContent = result.body;
+    document.getElementById('quiz-body').style.display = 'none';
+    document.getElementById('quiz-result').style.display = 'block';
+  }
+  document.getElementById('quiz-yes').addEventListener('click', function () { answer(true); });
+  document.getElementById('quiz-no').addEventListener('click', function () { answer(false); });
+  document.getElementById('quiz-restart').addEventListener('click', function () {
+    quizIndex = 0; quizScore = 0;
+    document.getElementById('quiz-result').style.display = 'none';
+    document.getElementById('quiz-body').style.display = 'block';
+    renderQuestion();
+  });
+  renderQuestion();
+</script>
+
+</body>
+</html>
